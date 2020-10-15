@@ -36,6 +36,7 @@ class App extends Component {
               return <div key={sub.id} className="grid-container">
               <span className="grid-item"> {sub.name} </span>
               <span className="grid-item"> {sub.phone} </span>
+              <button className="custom-btn del-btn">Delete</button>
             </div>
             })
           }
