@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-
 class App extends Component {
   render() {
+
+let x = 1;
+let y = 2;
+
   return (
     <div className="header">
       {/* <div>
@@ -14,7 +17,7 @@ class App extends Component {
         <span> Phone </span>
       </div> */}
       <label htmlFor="name"> Name </label>
-      <input id="name" type="text" placeholder="Type Here" defaultValue="Sherwin" />
+      <input id="name" type="text" placeholder="Type Here" defaultValue={x+y} />
     </div>
 
   );
