@@ -3,7 +3,9 @@ import Header from './Header'
 import './App.css';
 class App extends Component {
 
-
+deleteHandler(){
+  
+}
 
   render() {
 
@@ -36,7 +38,7 @@ class App extends Component {
               return <div key={sub.id} className="grid-container">
               <span className="grid-item"> {sub.name} </span>
               <span className="grid-item"> {sub.phone} </span>
-              <button className="custom-btn del-btn">Delete</button>
+              <button className="custom-btn del-btn" onClick={this.deleteHandler}>Delete</button>
             </div>
             })
           }
