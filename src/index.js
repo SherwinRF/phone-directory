@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 import './common/common.css';
 
 ReactDOM.render(
-  <AddSubscriber />,
+  <App />,
   document.getElementById('root')
 );
 

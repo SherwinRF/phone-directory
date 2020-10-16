@@ -3,24 +3,27 @@ import Header from './Header'
 import './App.css';
 class App extends Component {
 
-deleteHandler(){
-  
+constructor(){
+  super();
+  this.state = {
+    subscriberListToShow: []
+  }
 }
 
   render() {
 
-    let subscribers = [
-      {
-        id: 1,
-        name: "Sherwin Fernandes",
-        phone: "1234567890"
-      },
-      {
-        id: 2,
-        name: "Shilpa Bhat",
-        phone: "0987654321"
-      }
-    ]
+    // let subscribers = [
+    //   {
+    //     id: 1,
+    //     name: "Sherwin Fernandes",
+    //     phone: "1234567890"
+    //   },
+    //   {
+    //     id: 2,
+    //     name: "Shilpa Bhat",
+    //     phone: "0987654321"
+    //   }
+    // ]
 
   return (
     <div >
@@ -34,11 +37,11 @@ deleteHandler(){
           </div>
 
           {
-            subscribers.map(sub => {
+            this.state.subscriberListToShow.map(sub => {
               return <div key={sub.id} className="grid-container">
               <span className="grid-item"> {sub.name} </span>
               <span className="grid-item"> {sub.phone} </span>
-              <button className="custom-btn del-btn" onClick={this.deleteHandler}>Delete</button>
+              <button className="custom-btn del-btn">Delete</button>
             </div>
             })
           }
