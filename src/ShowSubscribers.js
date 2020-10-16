@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import Header from './Header'
 import './ShowSubscribers.css';
+import {Link} from 'react-router-dom';
 
 class ShowSubscribers extends Component {
 
-constructor(){
-  super();
-  this.state = {
-    subscriberListToShow: []
-  }
-}
+// constructor(){
+//   super();
+//   this.state = {
+//     subscriberListToShow: []
+//   }
+// }
 
   render() {
 
@@ -28,9 +29,10 @@ constructor(){
 
   return (
     <div >
+      
+      <Header heading="Phone Directory" />
       <div className="component-body-container">
-      <Header heading="Phone Directory" /> <br/>
-          <button className="custom-btn add-btn">Add</button>
+          <Link to="/add"><button className="custom-btn add-btn">Add</button></Link> 
 
           <div className="grid-container heading-container">
             <span className="grid-item name-heading">Name</span>
