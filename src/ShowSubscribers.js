@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Header from './Header'
 import './ShowSubscribers.css';
-class App extends Component {
+
+class ShowSubscribers extends Component {
 
 constructor(){
   super();
@@ -28,7 +29,7 @@ constructor(){
   return (
     <div >
       <div className="component-body-container">
-      <Header heading="Phone Directory" />
+      <Header heading="Phone Directory" /> <br/>
           <button className="custom-btn add-btn">Add</button>
 
           <div className="grid-container heading-container">
@@ -37,7 +38,7 @@ constructor(){
           </div>
 
           {
-            this.state.subscriberListToShow.map(sub => {
+            this.props.subscribersList.map(sub => {
               return <div key={sub.id} className="grid-container">
               <span className="grid-item"> {sub.name} </span>
               <span className="grid-item"> {sub.phone} </span>
@@ -54,4 +55,4 @@ constructor(){
   }
 }
 
-export default App;
+export default ShowSubscribers;

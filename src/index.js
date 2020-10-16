@@ -2,11 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import AddSubscriber from './AddSubscriber';
+import ShowSubscribers from './ShowSubscribers'
 import * as serviceWorker from './serviceWorker';
 import './common/common.css';
+import PhoneDirectory from './PhoneDirectory';
 
 ReactDOM.render(
-  <App />,
+  <PhoneDirectory />,
   document.getElementById('root')
 );
 
